@@ -1,0 +1,7 @@
+interface:
+  display_name: "PAPER"
+  short_description: "Academic paper, thesis, revision, citations, figures, PPTX, DOCX, LaTeX, contracts, and type-specific audits"
+  default_prompt: "Use $PAPER to plan, write, revise, polish, cite, illustrate, format, audit, respond to reviewers, or convert my academic manuscript into DOCX, LaTeX, Markdown, PDF, PPTX, or multi-format output with module contracts and article-type requirements."
+
+policy:
+  allow_implicit_invocation: true
