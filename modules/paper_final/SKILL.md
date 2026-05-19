@@ -18,6 +18,7 @@ Use `../../references/module_io_schemas.md` for the compact handoff shape.
 ## Audit Scope
 
 - proofreading and academic tone
+- Chinese-English abstract consistency and academic abstract structure
 - terminology, abbreviation, symbol, unit, and notation consistency
 - citation-reference matching
 - missing or suspicious reference metadata
@@ -30,6 +31,27 @@ Use `../../references/module_io_schemas.md` for the compact handoff shape.
 - final required revisions and optional improvements
 - scoped global terminology, symbol, abbreviation, dataset, method, figure-label, and equation-variable consistency
 - journal compliance items such as ethics, competing interests, data availability, code availability, author contributions, funding, acknowledgements, consent, and IRB statements where relevant
+
+## Thesis-Specific Red Flags
+
+For graduate theses, always check and prioritize:
+
+- English abstract not matching the Chinese abstract in method sequence, indicators, or quantitative results.
+- English abstracts with overlong sentence chains, inconsistent hyphenation such as "Vehicle- mounted", malformed terms such as "reaction- mechanism", or missing key numbers that appear in the Chinese abstract.
+- Abstracts containing work-report or defense-style prose, such as explaining "independent modules", dataset boundaries, or figure/evaluation separation instead of summarizing the study.
+- Repeated defensive limitation sentences across chapter endings. If limitations are valid, recommend consolidating them into methods, discussion, or "Limitations and Future Work".
+- Repetitive chapter summaries that merely restate preceding sections rather than synthesizing the chapter's central finding.
+- Template-like prose with frequent "结果表明", "这说明", "可以看出", "therefore", or repeated paragraph openings. Treat this as a polish risk when it affects readability.
+- Long, multi-clause sentences that combine background, methods, results, and caveats. Recommend splitting into direct active statements.
+- Overuse of negative framing such as "不是...而是..." and "不应...而应..."; prefer affirmative academic statements.
+- Unfilled bilingual cover fields, mojibake in symbol tables, inconsistent abbreviation definitions, or mixed notation for the same variable.
+- Repeated definitions of the same core concept across chapters when one notation or model section should define it once.
+- Formula-number jumps, blank formulas, bare manual equation numbers, missing figures behind figure references, table captions detached from table bodies, and unresolved cross-references.
+- TOC-page mismatch, missing dot leaders, inconsistent section indentation, wrong front-matter numbering, missing headers/footers, and discontinuous page numbering.
+- Parser-generated image boundary strings such as `image[[429, 170, 590, 280]]`, `[image]`, or similar OCR/PDF extraction artifacts must not be treated as actual manuscript content until verified against source files and rendered pages. They may be bounding-box metadata from an external parser rather than missing images.
+- Contribution or innovation sections that overclaim with unsupported "first", "new", or self-evaluative wording.
+- Innovation sections written as slogans, such as "采用...思路", "建立...方法", or "构建...策略", should be checked for objective evidence-facing phrasing.
+- Reference-list inconsistencies: partial DOI coverage, missing access dates for online policy documents, mixed Chinese/English punctuation, and ordering that conflicts with the target style.
 
 ## Readiness Levels
 
@@ -98,15 +120,46 @@ If support is weak, recommend one of:
 
 Check:
 
+- whether suspected image placeholders are present in the source manuscript body, in the LaTeX/DOCX structure, or only in text extracted by an external parser
+- whether each referenced image file exists and is nonzero-size
+- whether rendered pages visually contain the expected figure rather than only a caption or bounding-box text
 - each figure/table supports a specific claim
 - each panel has a distinct function
 - caption matches the visual
 - values in text match values in figures/tables
 - axes, units, legends, colorbars, scale bars, and statistics are complete
 - visual style is readable at target size
+- composite figures do not waste pages: a multi-panel figure should normally fit on one page when it has 4-6 small panels, using a balanced 2x2, 2x3, or similar layout
+- subpanels are visually uniform in size and aligned; one oversized panel should not squeeze or marginalize the other panels unless it is intentionally the main panel
+- spacing between subpanels is neither cramped nor excessive; excessive white space, caption-only pages, and single small plots occupying a full page should be flagged
+- large composite figures are not split awkwardly across pages. If unavoidable and allowed by the template, use continuation captions such as "Figure X (continued)" or the Chinese equivalent, and keep panel labels consistent
 - source and processing notes stay outside manuscript body
 
 Do not invent missing figures, tables, values, or metadata.
+
+### Image Placeholder Verification
+
+When a report or extracted text shows items such as `image[[x1, y1, x2, y2]]`, perform this sequence before labeling the manuscript as missing images:
+
+1. Search source files for literal placeholders: `image[[`, `[image]`, `<center>`, or similar artifacts.
+2. Inspect figure/table environments or DOCX media relationships to confirm whether a real image is referenced.
+3. Verify referenced image files exist and are nonzero-size.
+4. Render representative pages to PNG/PDF previews and inspect whether the figure is visible.
+5. If the rendered PDF shows the figure, report the issue as an extraction/parser artifact, not a manuscript defect.
+6. If only captions or empty frames remain after rendering, classify it as a major/fatal figure-placement defect depending on the importance of the figure.
+
+Include a contact sheet or page-preview artifact in the audit report when file artifacts are requested.
+
+### Composite Figure Layout Audit
+
+When auditing figures in theses or LaTeX/PDF outputs:
+
+1. Identify figures that are likely composites, especially response surfaces, multi-curve comparisons, residual plots, control inputs, and multi-panel performance summaries.
+2. Check whether 4-6 panels could be arranged on one page without loss of readability. Prefer 2x2, 2x3, or 3x2 panel grids.
+3. If a composite has more than 6-8 panels, recommend splitting it into two separately numbered figures rather than forcing one oversized figure.
+4. Check panel dimensions, axis-label readability, legend placement, and white-space ratio in the rendered page.
+5. Flag pages where a small figure or caption occupies a full page, unless the template or figure complexity justifies it.
+6. For LaTeX source, recommend `subfigure`, `subcaption`, `minipage`, or a pre-composed high-resolution raster only after verifying the rendered result.
 
 ## Global Consistency Audit
 

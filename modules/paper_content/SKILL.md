@@ -89,6 +89,33 @@ Fast-track output must include:
 - Prefer clear sentences of roughly 10-30 words in polished English.
 - Avoid em dashes by default unless the user requests that style.
 
+## Thesis Style and Abstract Alignment
+
+For graduate theses and bilingual manuscripts:
+
+- The English abstract must faithfully match the Chinese abstract in research sequence, method names, key indicators, and quantitative results. If the Chinese abstract reports RMSE, MAE, accuracy, sample size, or optimized parameters, the English abstract should normally report the same values unless the user asks for a shorter version.
+- Do not replace abstract content with explanatory scaffolding such as "the first module focuses on..." or "the two parts share the same background but use separate datasets." Convert such content into an integrated narrative of objective, method, result, and contribution.
+- Avoid defensive or self-limiting phrasing in chapter summaries. Move necessary scope limitations to methods, discussion, or a dedicated limitations section, and state them once with enough precision.
+- Reduce template-like repetition. Vary sentence openings, merge repeated definitions, and avoid overusing fixed phrases such as "results show", "it can be seen", "this indicates", and "this chapter summarizes" when the surrounding logic already makes the relation clear.
+- Use restrained contribution language. Prefer "This thesis adopts...", "A ... framework is established...", or "Compared with ..., the method..." over unsupported self-evaluation such as "first proposed", "innovative", or "new method".
+- Keep academic objectivity: do not write as if defending document structure to a reviewer. The manuscript body should present the study, not explain why the manuscript is arranged as it is.
+
+## Common Thesis Language Problems
+
+When polishing a thesis or journal manuscript, actively check for these recurring issues:
+
+- Defensive repetition: remove repeated "需要强调的是", "不直接等同于", "该结论适用于...但不意味着...", "it should be noted", and "does not mean" statements. Keep one precise boundary statement in methods, discussion, or limitations if needed.
+- Chapter summaries: rewrite "本章小结" as 2-3 synthesis sentences. Do not restate every section. Include only the core conclusion, important quantitative result, and transition.
+- Sentence rhythm: avoid starting many adjacent paragraphs with the same pattern, such as "从...看", "基于...", "因此...", or "结果表明". Use evidence-specific transitions or start directly with the subject.
+- Long sentences: split sentences that combine background, method, condition, and result. Prefer direct active clauses.
+- Oral or vague wording: replace "可有助于" with "有助于", "较为准确" with "准确", and "据此" with "因此" when context permits.
+- Repeated definitions: after core concepts are defined once, later chapters should cite or reuse them rather than redefining them. Use "如第2章所述" only when a reminder is necessary.
+- Voice consistency: prefer active, author-neutral phrasing such as "本文建立模型", "系统输出...", and "控制器调节..." over unnecessary passive constructions.
+- Innovation style: avoid slogan-like claims. Prefer evidence-facing phrasing: "与已有研究不同，本文在...中..." or "本文提出一种...方法用于...".
+- Key quantitative conclusions: give important numbers short emphasis when useful, for example "GA-SVR-ESO的RMSE为0.0706。相比PID，误差降低58.47%。"
+- Negative constructions: avoid repeated "不是...而是..." and "不应...而应..." patterns. Convert them to affirmative academic statements.
+- Technical term clusters: when listing methods such as "RBF kernel, Bayesian optimization, five-fold cross-validation", add a short functional connection so the sentence explains why each item is used.
+
 ## Citation-Aware Writing
 
 When adding or checking citations:

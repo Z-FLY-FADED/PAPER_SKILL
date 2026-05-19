@@ -177,6 +177,29 @@ Preserve:
 
 If a logical gap, unsupported claim, or missing source appears, do not silently smooth it over. Report it separately and ask for confirmation when needed.
 
+## Universal Thesis Quality Rules
+
+For theses and bilingual academic manuscripts, enforce these checks during writing, formatting, and final audit:
+
+- Chinese and English abstracts must correspond in structure, methods, key results, and quantitative conclusions. Do not insert "module explanation", defensive notes, source-boundary disclaimers, or outline-like commentary into only one abstract.
+- Abstracts should read as one integrated academic summary: background or problem, objective, methods, main results with key metrics when available, and significance. Avoid work-report phrasing such as "two independent modules are included" unless the manuscript type explicitly requires a study-design statement.
+- Keep limitations and applicability boundaries in methods, discussion, or a dedicated limitations section. Avoid repeating "it should be noted", "this does not mean", "the conclusion is only applicable to" at the end of multiple chapters.
+- Treat repeated defensive language as a cross-paper quality risk. Remove duplicate phrases such as "it should be emphasized", "does not directly equal", "does not mean", and "only applies to..." unless one concise scope statement is needed in the method, discussion, or limitations section.
+- Chapter summaries should synthesize, not repeat. Prefer 2-3 concise sentences that state the core result, the quantitative highlight when important, and the transition to the next chapter.
+- Avoid monotonous writing patterns. Reduce repeated sentence starters and fixed phrases such as "results show", "this indicates", "it can be seen", "therefore", and "from the perspective of"; vary with specific evidence-led transitions such as "analysis shows", "Figure X shows", or "Table Y indicates".
+- Keep important sentences short enough to read. Split sentences that contain multiple conditions, methods, and conclusions; a polished thesis sentence should usually stay near 20-30 Chinese characters or 10-30 English words when possible.
+- Replace oral or vague wording such as "can help", "relatively accurate", and "based on this" with concise academic phrasing such as "helps", "accurately", and "therefore".
+- Define core terms, acronyms, and symbols once, preferably in the model or notation section, then reuse the preferred form. Do not repeatedly redefine OER, SER, hydrogen yield, thermal efficiency, or equivalent core concepts in every chapter.
+- Use objective academic tone. Prefer "this thesis adopts/establishes/evaluates" over self-promotional novelty claims such as "first proposed" unless a verified priority claim is supported by evidence.
+- Innovation or contribution sections should be evidence-facing, not self-advertising. Prefer "Compared with prior work, this thesis..." or "This thesis proposes a..." over declarative slogans such as "a new method is constructed" or unsupported "first" claims.
+- Define abbreviations and variables at first use, then use one preferred form consistently. For example, define OER and SER once with their Chinese or English full names, then avoid alternating unexplained full names and abbreviations.
+- Equations, figures, tables, and references must be complete and consistently numbered. Blank formula placeholders, bare manual numbers, missing image placeholders, table header/data separation, and unresolved cross-references block a "final" label.
+- Multi-panel figures must use one overall figure number only. Internal panels should be marked consistently as `(a)`, `(b)`, `(c)` and cited as, for example, `Figure 3-4(a)` or `图3-4(a)`, rather than assigning separate figure numbers to each panel.
+- When a figure contains multiple small plots, split into true subfigures or rebuild as a clear panel grid when source assets allow it. Keep one caption and one figure number for the composite.
+- Rendered output must be checked for page-number continuity, header/footer consistency, table-of-contents page alignment, formula numbering, figure/table placement, and sparse figure-only pages.
+- Symbol and abbreviation tables must not contain parser artifacts, mojibake, pseudo-subscripts such as `F1H2,out`, or unexplained units. Use editable math notation and define ratios with concrete expressions where possible.
+- Reference formatting must follow the target style. Flag mixed DOI availability, missing access dates for web or policy documents, and inconsistent ordering or bilingual punctuation instead of silently normalizing unsupported metadata.
+
 ## Manuscript Body Separation
 
 The manuscript body may contain only content that belongs in the final academic document.
